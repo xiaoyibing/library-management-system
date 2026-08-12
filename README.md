@@ -55,7 +55,8 @@ library-management-system/
 
 ## 项目截图
 
-这里放登录页、管理员首页、图书管理、借阅管理、统计页面等截图。
+<img width="2549" height="1340" alt="image" src="https://github.com/user-attachments/assets/08fe9c97-84f9-4bfb-9a62-28045a38800b" />
+
 
 ## 本地运行
 
