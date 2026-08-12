@@ -1,0 +1,45 @@
+graph TB
+    subgraph "前端层 (Vue3 + Vite)"
+        A1[用户界面]
+        A2[Vue组件]
+        A3[Element Plus UI]
+        A4[API请求]
+    end
+    
+    subgraph "后端层 (Spring Boot)"
+        B1[API网关/Controller]
+        B2[JWT认证过滤器]
+        B3[服务层Service]
+        B4[数据访问层Mapper]
+        B5[安全配置Spring Security]
+    end
+
+    subgraph "数据库层 (MySQL)"
+        C1[数据库实例]
+        C2[用户表 sys_user]
+        C3[图书表 book]
+        C4[借阅记录表 borrow_record]
+        C5[分类表 book_category]
+        C6[书架表 book_shelf]
+        C7[书架关系表 book_shelf_relation]
+        C8[读者表 reader]
+    end
+
+    A1 --> A4
+    A2 --> A4
+    A3 --> A2
+    A4 --> B1
+
+    B1 --> B2
+    B2 --> B3
+    B3 --> B4
+    B5 --> B1
+
+    B4 --> C1
+    C1 --> C2
+    C1 --> C3
+    C1 --> C4
+    C1 --> C5
+    C1 --> C6
+    C1 --> C7
+    C1 --> C8
